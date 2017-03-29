@@ -32,12 +32,12 @@ function renderHistogram(ctx, names, times) {
 
   var unit = histogramHeight / maxTime;
   for (i = 0; i < names.length; i++) {
-    var barXPosition = x + i * (barWidth + barMargin);    
-    var barYPosition = 235 - histogramHeight + (maxTime - times[i]) * unit;    
+    var barXPosition = x + i * (barWidth + barMargin);
+    var barYPosition = 235 - histogramHeight + (maxTime - times[i]) * unit;
     var barHeight = times[i] * unit;
 
     ctx.fillStyle = names[i] === myName ? myColor : generateRandomColor();
-    ctx.fillRect(barXPosition, barYPosition, barWidth, barHeight); 
+    ctx.fillRect(barXPosition, barYPosition, barWidth, barHeight);
 
     ctx.fillStyle = 'rgb(0, 0, 0)';
     ctx.fillText(names[i], barXPosition, 250);
